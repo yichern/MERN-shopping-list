@@ -10,7 +10,6 @@ app.use(express.json());
 
 // DB config
 const db = process.env.MONGO_URI;
-console.log(db);
 
 // connect to Mongo
 mongoose
