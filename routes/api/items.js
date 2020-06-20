@@ -7,7 +7,7 @@ const Item = require('../../models/Item');
 
 // @route   GET api/items
 // @desc    get all items
-// @access  private
+// @access  public
 router.get('/', (req, res) => {
   Item.find()
     .sort({ date: -1 })
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 
 // @route   POST api/items
 // @desc    create an item
-// @access  public
+// @access  private
 router.post('/', auth, (req, res) => {
   const newItem = new Item({
     name: req.body.name,
